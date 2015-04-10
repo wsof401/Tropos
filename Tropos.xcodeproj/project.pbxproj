@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = E59B090E67C8BD269D3CD9DB /* Main.storyboard */; };
+		3CB8B0E91AD81C7B00AD6C1E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8B0E81AD81C7B00AD6C1E /* InterfaceController.swift */; };
+		3CB8B0EB1AD81C7B00AD6C1E /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8B0EA1AD81C7B00AD6C1E /* GlanceController.swift */; };
+		3CB8B0ED1AD81C7B00AD6C1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8B0EC1AD81C7B00AD6C1E /* Images.xcassets */; };
+		3CB8B0F11AD81C7B00AD6C1E /* Tropos WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8B0F01AD81C7B00AD6C1E /* Tropos WatchKit App.app */; };
+		3CB8B0F91AD81C7B00AD6C1E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8B0F71AD81C7B00AD6C1E /* Interface.storyboard */; };
+		3CB8B0FE1AD81C7B00AD6C1E /* Tropos WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CB8B0E41AD81C7B00AD6C1E /* Tropos WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CB8B1091AD83CF100AD6C1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8B1081AD83CF100AD6C1E /* Images.xcassets */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
 		4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
@@ -74,7 +81,35 @@
 			remoteGlobalIDString = 45ADD324EABFD89F9E640007;
 			remoteInfo = CarlWeathers;
 		};
+		3CB8B0F21AD81C7B00AD6C1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 198EF8739DFBDBC4FBC67D3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB8B0EF1AD81C7B00AD6C1E;
+			remoteInfo = "Tropos WatchKit App";
+		};
+		3CB8B0FC1AD81C7B00AD6C1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 198EF8739DFBDBC4FBC67D3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB8B0E31AD81C7B00AD6C1E;
+			remoteInfo = "Tropos WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3CB8B1051AD81C7B00AD6C1E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3CB8B0FE1AD81C7B00AD6C1E /* Tropos WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -85,6 +120,16 @@
 		2853082980109C89B8F07D3C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CA708068A67D7E761D29251 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3431B0CE6A3E1D06EBAB27BF /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C5539C31AD8180D009AF5FC /* Secrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
+		3CB8B0E41AD81C7B00AD6C1E /* Tropos WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tropos WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB8B0E71AD81C7B00AD6C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB8B0E81AD81C7B00AD6C1E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		3CB8B0EA1AD81C7B00AD6C1E /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		3CB8B0EC1AD81C7B00AD6C1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3CB8B0F01AD81C7B00AD6C1E /* Tropos WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tropos WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB8B0F61AD81C7B00AD6C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB8B0F81AD81C7B00AD6C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		3CB8B1081AD83CF100AD6C1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		436D9431497525313B32E225 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4D0A5C361A3A27510084C41E /* TRForecastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRForecastController.h; sourceTree = "<group>"; };
 		4D0A5C371A3A27510084C41E /* TRForecastController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRForecastController.m; sourceTree = "<group>"; };
@@ -185,11 +230,17 @@
 		DED70296CC99B4AAD0DE42BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E2B218FB5F097AAE3080F4DD /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		E59B090E67C8BD269D3CD9DB /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		E799194B1ACEE75C00A5600C /* Secrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
 		E7E8D6021ACF0B9700BD8364 /* TRWeatherUpdateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherUpdateSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3CB8B0E11AD81C7B00AD6C1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		800364D174D6FAD56EBFE31C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +325,43 @@
 			path = UnitTests;
 			sourceTree = "<group>";
 		};
+		3CB8B0E51AD81C7B00AD6C1E /* Tropos WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3CB8B0E81AD81C7B00AD6C1E /* InterfaceController.swift */,
+				3CB8B0EA1AD81C7B00AD6C1E /* GlanceController.swift */,
+				3CB8B0EC1AD81C7B00AD6C1E /* Images.xcassets */,
+				3CB8B0E61AD81C7B00AD6C1E /* Supporting Files */,
+			);
+			path = "Tropos WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		3CB8B0E61AD81C7B00AD6C1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CB8B0E71AD81C7B00AD6C1E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3CB8B0F41AD81C7B00AD6C1E /* Tropos WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				3CB8B0F71AD81C7B00AD6C1E /* Interface.storyboard */,
+				3CB8B1081AD83CF100AD6C1E /* Images.xcassets */,
+				3CB8B0F51AD81C7B00AD6C1E /* Supporting Files */,
+			);
+			path = "Tropos WatchKit App";
+			sourceTree = "<group>";
+		};
+		3CB8B0F51AD81C7B00AD6C1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CB8B0F61AD81C7B00AD6C1E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4D0A5C3E1A3A578E0084C41E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +434,8 @@
 			children = (
 				57761BB4DFB42997964F13EE /* Tropos.app */,
 				BE299336DA1BFBE36CB7763B /* UnitTests.xctest */,
+				3CB8B0E41AD81C7B00AD6C1E /* Tropos WatchKit Extension.appex */,
+				3CB8B0F01AD81C7B00AD6C1E /* Tropos WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -439,6 +529,8 @@
 				E4F796A1BFA14961F3C5EE5E /* Tropos */,
 				301CF0A99B4C5FAECDB23D75 /* Resources */,
 				3BE8FEB37F8EAA83D075A253 /* UnitTests */,
+				3CB8B0E51AD81C7B00AD6C1E /* Tropos WatchKit Extension */,
+				3CB8B0F41AD81C7B00AD6C1E /* Tropos WatchKit App */,
 				79646077C042F7DDDC35EBEA /* Frameworks */,
 				702F42EA5C215DCFAE2AAC5C /* Products */,
 				21DDD3911F58296F86C19011 /* Pods */,
@@ -462,7 +554,6 @@
 		E4F796A1BFA14961F3C5EE5E /* Tropos */ = {
 			isa = PBXGroup;
 			children = (
-				E799194B1ACEE75C00A5600C /* Secrets.h */,
 				4D7CDEC91A47E1180038DD33 /* Formatters */,
 				F7756A61DA7A0F0958F6D728 /* Categories */,
 				771282ADE8938D4011617AD5 /* Protocols */,
@@ -472,6 +563,7 @@
 				02DE38BC587E0F44ACAB470A /* Controllers */,
 				C2E44CDE1A3A3BFB009CC844 /* ViewControllers */,
 				639AAB142C96B59FC995CA1D /* Views */,
+				3C5539C31AD8180D009AF5FC /* Secrets.h */,
 			);
 			path = Tropos;
 			sourceTree = "<group>";
@@ -516,6 +608,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3CB8B0E31AD81C7B00AD6C1E /* Tropos WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CB8B1041AD81C7B00AD6C1E /* Build configuration list for PBXNativeTarget "Tropos WatchKit Extension" */;
+			buildPhases = (
+				3CB8B0E01AD81C7B00AD6C1E /* Sources */,
+				3CB8B0E11AD81C7B00AD6C1E /* Frameworks */,
+				3CB8B0E21AD81C7B00AD6C1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CB8B0F31AD81C7B00AD6C1E /* PBXTargetDependency */,
+			);
+			name = "Tropos WatchKit Extension";
+			productName = "Tropos WatchKit Extension";
+			productReference = 3CB8B0E41AD81C7B00AD6C1E /* Tropos WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		3CB8B0EF1AD81C7B00AD6C1E /* Tropos WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CB8B1031AD81C7B00AD6C1E /* Build configuration list for PBXNativeTarget "Tropos WatchKit App" */;
+			buildPhases = (
+				3CB8B0EE1AD81C7B00AD6C1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tropos WatchKit App";
+			productName = "Tropos WatchKit App";
+			productReference = 3CB8B0F01AD81C7B00AD6C1E /* Tropos WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		45ADD324EABFD89F9E640007 /* Tropos */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA143D2AD1081C4274E37CCE /* Build configuration list for PBXNativeTarget "Tropos" */;
@@ -528,10 +653,12 @@
 				B426E4C5542F07A66A70065A /* Copy Pods Resources */,
 				C247D7F61A5F07A00032F747 /* Update Build Number */,
 				C2422E4B1A718BC800F72769 /* Hockey Run Script */,
+				3CB8B1051AD81C7B00AD6C1E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3CB8B0FD1AD81C7B00AD6C1E /* PBXTargetDependency */,
 			);
 			name = Tropos;
 			productName = CarlWeathers;
@@ -568,6 +695,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
+					3CB8B0E31AD81C7B00AD6C1E = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 8E7TQ638ZD;
+					};
+					3CB8B0EF1AD81C7B00AD6C1E = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					45ADD324EABFD89F9E640007 = {
 						DevelopmentTeam = 8E7TQ638ZD;
 					};
@@ -579,6 +713,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D02B1FEF37316A9F6B8E4B34;
 			productRefGroup = 702F42EA5C215DCFAE2AAC5C /* Products */;
@@ -587,6 +722,8 @@
 			targets = (
 				45ADD324EABFD89F9E640007 /* Tropos */,
 				AA349281EBCAE02432E93D8E /* UnitTests */,
+				3CB8B0E31AD81C7B00AD6C1E /* Tropos WatchKit Extension */,
+				3CB8B0EF1AD81C7B00AD6C1E /* Tropos WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -596,6 +733,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB8B0E21AD81C7B00AD6C1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB8B0ED1AD81C7B00AD6C1E /* Images.xcassets in Resources */,
+				3CB8B0F11AD81C7B00AD6C1E /* Tropos WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB8B0EE1AD81C7B00AD6C1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB8B1091AD83CF100AD6C1E /* Images.xcassets in Resources */,
+				3CB8B0F91AD81C7B00AD6C1E /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +876,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3CB8B0E01AD81C7B00AD6C1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB8B0E91AD81C7B00AD6C1E /* InterfaceController.swift in Sources */,
+				3CB8B0EB1AD81C7B00AD6C1E /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7C2C287E78ABB83892B5E8B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -785,6 +949,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3CB8B0F31AD81C7B00AD6C1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CB8B0EF1AD81C7B00AD6C1E /* Tropos WatchKit App */;
+			targetProxy = 3CB8B0F21AD81C7B00AD6C1E /* PBXContainerItemProxy */;
+		};
+		3CB8B0FD1AD81C7B00AD6C1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CB8B0E31AD81C7B00AD6C1E /* Tropos WatchKit Extension */;
+			targetProxy = 3CB8B0FC1AD81C7B00AD6C1E /* PBXContainerItemProxy */;
+		};
 		9BB8CE14790AABA30710CABC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 45ADD324EABFD89F9E640007 /* Tropos */;
@@ -793,6 +967,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3CB8B0F71AD81C7B00AD6C1E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CB8B0F81AD81C7B00AD6C1E /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		C2E44CE61A3A4273009CC844 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -812,6 +994,109 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3CB8B0FF1AD81C7B00AD6C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Tropos WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3CB8B1001AD81C7B00AD6C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Tropos WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3CB8B1011AD81C7B00AD6C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = Tropos_WatchKit_Extension;
+				INFOPLIST_FILE = "Tropos WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		3CB8B1021AD81C7B00AD6C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = Tropos_WatchKit_Extension;
+				INFOPLIST_FILE = "Tropos WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		4C523B4DE48AC8A7CC413F1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DED70296CC99B4AAD0DE42BD /* Pods.release.xcconfig */;
@@ -825,6 +1110,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Resources/Other-Sources/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
@@ -914,6 +1200,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "Resources/Other-Sources/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Tropos;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
@@ -1029,6 +1316,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3CB8B1031AD81C7B00AD6C1E /* Build configuration list for PBXNativeTarget "Tropos WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB8B1011AD81C7B00AD6C1E /* Debug */,
+				3CB8B1021AD81C7B00AD6C1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3CB8B1041AD81C7B00AD6C1E /* Build configuration list for PBXNativeTarget "Tropos WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB8B0FF1AD81C7B00AD6C1E /* Debug */,
+				3CB8B1001AD81C7B00AD6C1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		FA143D2AD1081C4274E37CCE /* Build configuration list for PBXNativeTarget "Tropos" */ = {
 			isa = XCConfigurationList;
