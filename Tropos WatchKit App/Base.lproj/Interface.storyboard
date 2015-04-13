@@ -8,7 +8,16 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tropos_WatchKit_App" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tropos_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView alignment="center" image="clear-day" id="YoY-wK-J0S"/>
+                        <label width="110" height="89" alignment="center" verticalAlignment="bottom" text="It's Always Sunny in Boston" textAlignment="center" numberOfLines="10" id="vkG-6E-AoK"/>
+                    </items>
+                    <connections>
+                        <outlet property="phraseLabel" destination="vkG-6E-AoK" id="Oan-YU-Mxc"/>
+                        <outlet property="weatherImage" destination="YoY-wK-J0S" id="xlE-CD-lmq"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="164" y="217"/>
         </scene>

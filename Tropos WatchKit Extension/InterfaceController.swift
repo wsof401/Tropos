@@ -4,10 +4,22 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var phraseLabel: WKInterfaceLabel!
+    @IBOutlet weak var weatherImage: WKInterfaceImage!
+
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+
+        self.dynamicType.openParentApplication(
+            ["foo": "bar"], reply: { (data, error) -> Void in
+                if let text = data["phrase"] as? String, image = data["image"] as? String {
+                    self.phraseLabel.setText(text)
+                    self.weatherImage.setImageNamed(image)
+                }
+            }
+        )
     }
 
     override func willActivate() {
