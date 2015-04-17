@@ -38,6 +38,7 @@
     self.settingsController = [TRSettingsController new];
 
     @weakify(self)
+    
     self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
         return [[[[self.locationController requestWhenInUseAuthorization] then:^RACSignal *{
@@ -66,7 +67,7 @@
 
 - (RACSignal *)status
 {
-    RACSignal *updating = [[self.updateWeatherCommand.executing ignore:@NO] mapReplace:nil];
+    RACSignal *updating = [[self.updateWeatherCommand.executing ignore:@NO] mapReplace:nil];;
     RACSignal *success = [RACObserve(self, viewModel.updatedDateString) ignore:nil];
     RACSignal *error = [[RACObserve(self, weatherUpdateError) ignore:nil] mapReplace:nil];
 
@@ -92,6 +93,11 @@
 - (RACSignal *)conditionsDescription
 {
     return RACObserve(self, viewModel.conditionsDescription);
+}
+
+- (RACSignal *)conditionsDescriptionString
+{
+    return RACObserve(self, viewModel.conditionsDescriptionString);
 }
 
 - (RACSignal *)windDescription

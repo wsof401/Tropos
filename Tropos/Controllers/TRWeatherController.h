@@ -4,6 +4,7 @@
 @property (nonatomic, readonly) RACSignal *status;
 @property (nonatomic, readonly) RACSignal *conditionsImage;
 @property (nonatomic, readonly) RACSignal *conditionsDescription;
+@property (nonatomic, readonly) RACSignal *conditionsDescriptionString;
 @property (nonatomic, readonly) RACSignal *windDescription;
 @property (nonatomic, readonly) RACSignal *highLowTemperatureDescription;
 @property (nonatomic, readonly) RACSignal *dailyForecastViewModels;

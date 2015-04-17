@@ -13,10 +13,15 @@ class InterfaceController: WKInterfaceController {
         // Configure interface objects here.
 
         self.dynamicType.openParentApplication(
-            ["foo": "bar"], reply: { (data, error) -> Void in
-                if let text = data["phrase"] as? String, image = data["image"] as? String {
-                    self.phraseLabel.setText(text)
-                    self.weatherImage.setImageNamed(image)
+            ["foo": "bar"], reply: { (data, error) in
+                if error != nil {
+                    println(error.localizedDescription)
+                }
+                else if let text = data["phrase"] as? String {
+                    if let image = data["image"] as? String {
+                        self.phraseLabel.setText(text)
+                        self.weatherImage.setImageNamed(image)
+                    }
                 }
             }
         )

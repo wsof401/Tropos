@@ -40,9 +40,6 @@
 
 - (UIImage *)conditionsImage
 {
-    //FIXME: this is a huge hack
-    [self saveStringToFile:@"lastWeatherUpdateImage.txt" content:self.weatherUpdate.conditionsDescription];
-
     return [UIImage imageNamed:self.weatherUpdate.conditionsDescription];
 }
 
@@ -59,21 +56,12 @@
     TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFromTemperature:self.weatherUpdate.yesterdaysTemperature];
     [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:adjective];
 
-    //FIXME: this is a huge hack
-    [self saveStringToFile:@"lastWeatherUpdate.txt" content:comparisonString];
-
     return attributedString;
 }
 
-//FIXME: this is a huge hack
-- (void)saveStringToFile:(NSString *)filename content:(NSString *)content
+- (NSString *)conditionsDescriptionString
 {
-    NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
-
-    NSString *cachesFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *file = [cachesFolder stringByAppendingPathComponent:filename];
-
-    [data writeToFile:file atomically: YES];
+    return [[self conditionsDescription] string];
 }
 
 - (NSString *)windDescription
