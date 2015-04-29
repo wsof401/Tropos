@@ -51,7 +51,7 @@
     NSString *comparisonString = [TRTemperatureComparisonFormatter localizedStringFromComparison:comparison adjective:&adjective];
 
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:comparisonString];
-    [attributedString setFont:[UIFont defaultUltraLightFontOfSize:37]];
+    [attributedString setFont:[UIFont defaultLightFontOfSize:37]];
     [attributedString setTextColor:[UIColor defaultTextColor]];
     TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFromTemperature:self.weatherUpdate.yesterdaysTemperature];
     [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:adjective];
