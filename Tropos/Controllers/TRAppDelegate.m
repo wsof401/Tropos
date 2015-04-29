@@ -2,6 +2,7 @@
 #import "TRAppDelegate.h"
 #import "TRAnalyticsController.h"
 #import "TRSettingsController.h"
+#import "Tropos-Swift.h"
 
 #ifndef DEBUG
 #import "Secrets.h"
