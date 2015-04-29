@@ -6,45 +6,11 @@
 	<array>
 		<dict>
 			<key>Type</key>
-			<string>PSMultiValueSpecifier</string>
-			<key>Title</key>
-			<string>Unit System</string>
-			<key>Key</key>
-			<string>TRUnitSystem</string>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>Titles</key>
-			<array>
-				<string>Metric</string>
-				<string>Imperial</string>
-			</array>
-			<key>Values</key>
-			<array>
-				<string>0</string>
-				<string>1</string>
-			</array>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string>About Tropos</string>
-		</dict>
-		<dict>
-			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 			<key>Title</key>
 			<string>Acknowledgements</string>
 			<key>File</key>
 			<string>Acknowledgements</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSChildPaneSpecifier</string>
-			<key>Title</key>
-			<string>Privacy Policy</string>
-			<key>File</key>
-			<string>PrivacyPolicy</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>
