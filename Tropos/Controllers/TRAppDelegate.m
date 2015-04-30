@@ -21,7 +21,7 @@
 #endif
 
     [[TRSettingsController new] registerSettings];
-    [AppearanceManager configureAppearance];
+    [AppearanceController configureAppearance];
 
     return YES;
 }
