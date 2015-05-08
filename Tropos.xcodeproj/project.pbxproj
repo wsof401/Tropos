@@ -64,6 +64,7 @@
 		CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */; };
 		D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */; };
 		E7A895541AFD11AA0023205B /* TRApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A895531AFD11AA0023205B /* TRApplicationController.m */; };
+		E7A8955D1AFD1CAA0023205B /* TRWeatherUpdateCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A8955C1AFD1CAA0023205B /* TRWeatherUpdateCache.m */; };
 		E7E8D6031ACF0B9700BD8364 /* TRWeatherUpdateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E8D6021ACF0B9700BD8364 /* TRWeatherUpdateSpec.m */; };
 /* End PBXBuildFile section */
 
@@ -189,6 +190,8 @@
 		E799194B1ACEE75C00A5600C /* Secrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
 		E7A895521AFD11AA0023205B /* TRApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRApplicationController.h; sourceTree = "<group>"; };
 		E7A895531AFD11AA0023205B /* TRApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationController.m; sourceTree = "<group>"; };
+		E7A8955B1AFD1CAA0023205B /* TRWeatherUpdateCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherUpdateCache.h; sourceTree = "<group>"; };
+		E7A8955C1AFD1CAA0023205B /* TRWeatherUpdateCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherUpdateCache.m; sourceTree = "<group>"; };
 		E7E8D6021ACF0B9700BD8364 /* TRWeatherUpdateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherUpdateSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,6 +318,8 @@
 				4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */,
 				4D98E9891A80C89600856412 /* TRDailyForecast.h */,
 				4D98E98A1A80C89600856412 /* TRDailyForecast.m */,
+				E7A8955B1AFD1CAA0023205B /* TRWeatherUpdateCache.h */,
+				E7A8955C1AFD1CAA0023205B /* TRWeatherUpdateCache.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -767,6 +772,7 @@
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
 				C9318C8461EB5FE3914F9AC0 /* main.m in Sources */,
 				4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */,
+				E7A8955D1AFD1CAA0023205B /* TRWeatherUpdateCache.m in Sources */,
 				4D3386FF1A5D27260087B88F /* TRTemperatureFormatter.m in Sources */,
 				4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */,
 				4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */,
