@@ -8,6 +8,7 @@
 #import "TRDailyForecastViewModel.h"
 #import "TRAnalyticsController.h"
 #import "TRWeatherViewModel.h"
+#import "TRWeatherUpdateCache.h"
 
 @interface TRWeatherController ()
 
@@ -40,16 +41,27 @@
     @weakify(self)
     self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
-        return [[[[self.locationController requestWhenInUseAuthorization] then:^RACSignal *{
+        return [[[[[self.locationController requestWhenInUseAuthorization] then:^RACSignal *{
             return [self.locationController updateCurrentLocation];
         }] flattenMap:^RACStream *(CLLocation *location) {
             return [self.geocodeController reverseGeocodeLocation:location];
         }] flattenMap:^RACStream *(CLPlacemark *placemark) {
             return [self.forecastController fetchWeatherUpdateForPlacemark:placemark];
+        }] map:^(TRWeatherUpdate *update) {
+            [[TRWeatherUpdateCache new] saveWeatherUpdate:update];
+            return update;
         }];
     }];
 
-    RAC(self, viewModel) = [[[self.updateWeatherCommand.executionSignals switchToLatest] doNext:^(TRWeatherUpdate *update) {
+    TRWeatherUpdate *cachedUpdate = [[TRWeatherUpdateCache new] latest];
+    RACSignal *weatherUpdates = nil;
+    if (cachedUpdate) {
+        weatherUpdates = [self.updateWeatherCommand.executionSignals startWith:[RACSignal return:cachedUpdate]];
+    } else {
+        weatherUpdates = self.updateWeatherCommand.executionSignals;
+    }
+
+    RAC(self, viewModel) = [[[weatherUpdates switchToLatest] doNext:^(TRWeatherUpdate *update) {
         [[TRAnalyticsController sharedController] trackEvent:update];
     }] map:^id(TRWeatherUpdate *update) {
         return [[TRWeatherViewModel alloc] initWithWeatherUpdate:update];
