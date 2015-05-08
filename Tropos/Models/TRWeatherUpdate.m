@@ -18,6 +18,8 @@
 @property (nonatomic, copy, readwrite) NSArray *dailyForecasts;
 
 @property (nonatomic) CLPlacemark *placemark;
+@property (nonatomic) id currentConditions;
+@property (nonatomic) id yesterdaysConditions;
 
 @end
 
@@ -28,6 +30,8 @@
     self = [super init];
     if (!self) return nil;
 
+    self.currentConditions = currentConditionsJSON;
+    self.yesterdaysConditions = yesterdaysConditionsJSON;
     self.placemark = placemark;
     self.city = placemark.locality;
     self.state = placemark.administrativeArea;
@@ -67,6 +71,29 @@
         self.currentHigh = self.currentTemperature;
     }
 }
+
+#pragma mark - NSCoding
+
+#define kCurrentConditionsKey @"CurrentConditions"
+#define kYesterdaysConditionsKey @"YesterdaysCOnditions"
+#define kPlacemarkKey @"Placemark"
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.currentConditions forKey:kCurrentConditionsKey];
+    [coder encodeObject:self.yesterdaysConditions forKey:kYesterdaysConditionsKey];
+    [coder encodeObject:self.placemark forKey:kPlacemarkKey];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    CLPlacemark *placemark = [coder decodeObjectForKey:kPlacemarkKey];
+    id currentConditions = [coder decodeObjectForKey:kCurrentConditionsKey];
+    id yesterdaysConditions = [coder decodeObjectForKey:kYesterdaysConditionsKey];
+
+    return [self initWithPlacemark:placemark currentConditionsJSON:currentConditions yesterdaysConditionsJSON:yesterdaysConditions];
+}
+
 
 @end
 
