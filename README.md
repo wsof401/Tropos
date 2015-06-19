@@ -1,5 +1,6 @@
 <img height="30" width="30" src="http://troposweather.com/assets/images/icon-491180cb.png" alt="Tropos Logo"> Tropos
 ===============
+[![Build Status](https://travis-ci.org/thoughtbot/Tropos.svg?branch=master)](https://travis-ci.org/thoughtbot/Tropos)
 
 Weather and forecasts for humans.
 Information you can act on.
